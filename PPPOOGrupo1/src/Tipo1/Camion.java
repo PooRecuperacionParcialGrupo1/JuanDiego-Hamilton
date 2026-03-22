@@ -12,9 +12,6 @@ public class Camion extends Vehiculo {
         this.capacidadCargaToneladas = capacidadCargaToneladas;
     }
     
-
-    
-    
     @Override
     public double calcularAutonomia() {
         double autonomiaBase = 500;
@@ -23,19 +20,16 @@ public class Camion extends Vehiculo {
         return autonomia;
     }
     
-    
-    
-
- 
-    //TERMINAR DE IMPLEMENTAR EL FUNCIONAMIENTO DE LOS METODOS SOBRECARGADOS
     public void asignarRuta(){
+        System.out.println("Ruta estandar asignada. Sin destino especifico aun.");
     }
     
-    public void asignarRuta(String atrdestino){
-
+    public void asignarRuta(String atrDestino){
+        System.out.println("Ruta asignada con destino a:" + atrDestino);
     }
     
-    public void asignarRuta(String atrdestino, double artrDistanciaKm){
-     
+    public void asignarRuta(String atrDestino, double atrDistanciaKm){
+        System.out.println("Ruta asignada al destino: "+ atrDestino + ". Distancia total: "+ atrDistanciaKm +". Preparando logistica pesada.");
+        
     }
 }

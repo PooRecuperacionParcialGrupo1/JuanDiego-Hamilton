@@ -9,12 +9,15 @@ package pppoogrupo1;
  * @author Juan Diego Isaza - Juan Manuel Galeano
  */
 public class PPPOOGrupo1 {
+ 
+    
+    
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    //public static void main(String[] args) {
         // TODO code application logic here
-    }
+    //}
     
 }
