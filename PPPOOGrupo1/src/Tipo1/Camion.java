@@ -6,21 +6,27 @@ package Tipo1;
  */
 public class Camion extends Vehiculo {
     double capacidadCargaToneladas;
+
+    public Camion(double capacidadCargaToneladas, String placa, String marca, String modelo, String atrDestino, double atrDistanciaKm) {
+        super(placa, marca, modelo, atrDestino, atrDistanciaKm);
+        this.capacidadCargaToneladas = capacidadCargaToneladas;
+    }
     
 
-    public Camion(double capacidadCargaToneladas, String placa, String modelo, String marca) {
-        super(placa, modelo, marca);
-        this.capacidadCargaToneladas = capacidadCargaToneladas;
-    } 
+    
+    
+    @Override
+    public double calcularAutonomia() {
+        double autonomiaBase = 500;
+        double factorConsumo = 20;
+        double autonomia = autonomiaBase - (this.capacidadCargaToneladas * factorConsumo) ;
+        return autonomia;
+    }
+    
     
     
 
  
-    @Override
-    float calcularAutonomia() {
-        return(float) (1000.0 - (capacidadCargaToneladas * 10.0));
-    }
-    
     //TERMINAR DE IMPLEMENTAR EL FUNCIONAMIENTO DE LOS METODOS SOBRECARGADOS
     public void asignarRuta(){
     }

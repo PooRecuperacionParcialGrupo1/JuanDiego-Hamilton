@@ -12,15 +12,19 @@ package Tipo1;
 
 public class Furgoneta extends Vehiculo{
     double volumenLitros;
-    
-    public Furgoneta(double volumenLitros, String placa, String modelo, String marca) {
-        super(placa, modelo, marca);
+
+    public Furgoneta(double volumenLitros, String placa, String marca, String modelo, String atrDestino, double atrDistanciaKm) {
+        super(placa, marca, modelo, atrDestino, atrDistanciaKm);
         this.volumenLitros = volumenLitros;
     }
+    
+
 
     @Override
-    float calcularAutonomia() {
-        return 500.0f;
+    public double calcularAutonomia() {
+        double kilometrosXlitro = 15.0;
+        double autonomia = this.volumenLitros / kilometrosXlitro;
+        return autonomia;
     }
     
 }

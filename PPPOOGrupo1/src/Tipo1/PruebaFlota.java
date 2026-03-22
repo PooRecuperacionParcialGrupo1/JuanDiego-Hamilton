@@ -10,12 +10,14 @@ import java.util.ArrayList;
  * @author hamilton castro
  */
 public class PruebaFlota {
+    //PUNTO 4
+    static ArrayList <Camion> listaCamiones = new ArrayList();
+    static ArrayList <Furgoneta> listaFurgonetas = new ArrayList();
+    
     public static void main(String[] args) {
         
-        //PUNTO 4
-        ArrayList <Camion> listaCamiones = new ArrayList();
-        ArrayList <Furgoneta> listaFurgonetas = new ArrayList();
-
+      
+     
         //PUNTO 3
         Camion c1 = new Camion(10.5, "XYZ-121", "2020", "Volvo");
         Camion c2 = new Camion(15.0, "BBC-222", "2021", "Kenworth");

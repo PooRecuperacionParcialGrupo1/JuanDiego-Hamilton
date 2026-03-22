@@ -12,25 +12,30 @@ import java.util.Objects;
  */
 public abstract class Vehiculo {
     String placa;
-    String modelo;
     String marca;
+    String modelo;
+    String atrDestino;
+    double atrDistanciaKm;
 
-    public Vehiculo(String placa, String modelo, String marca) {
+    public Vehiculo(String placa, String marca, String modelo, String atrDestino, double atrDistanciaKm) {
         this.placa = placa;
-        this.modelo = modelo;
         this.marca = marca;
+        this.modelo = modelo;
+        this.atrDestino = atrDestino;
+        this.atrDistanciaKm = atrDistanciaKm;
+    }
+
+    public void mostrarInfoGeneral(){
+        System.out.println("Placa:" + placa + "| Marca:" + marca + "| Modelo:" + modelo + "| Destino:" + atrDestino + "| Distancia: " + atrDistanciaKm + "Km");
+        
     }
     
-    abstract float calcularAutonomia();
-    
-    String mostrarInformacionGeneral(){
-        return "Vehiculo{" + "placa=" + placa + ", modelo=" + modelo + ", marca=" + marca + '}';
-    }
+    public abstract double calcularAutonomia();
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 73 * hash + Objects.hashCode(this.placa);
+        hash = 97 * hash + Objects.hashCode(this.placa);
         return hash;
     }
 
@@ -48,9 +53,5 @@ public abstract class Vehiculo {
         final Vehiculo other = (Vehiculo) obj;
         return Objects.equals(this.placa, other.placa);
     }
-    
-    
-
-
     
 }
