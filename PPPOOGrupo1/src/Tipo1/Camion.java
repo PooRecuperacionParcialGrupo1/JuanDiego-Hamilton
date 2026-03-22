@@ -6,35 +6,35 @@ package Tipo1;
 
 /**
  *
- * @author Juan Diego Isaza - Juan Manuel Galeano
+ * @author Juan Diego Isaza - Hamilton Castro
  */
-public class Camion extends Vehiculo {
-    int CapacidadCargaToneladas;
-    String atrdestino;
-    float atrdistancia;
+public class Camion extends Vehiculo{
+    double capacidadCargaToneladas;
 
-    public Camion(int CapacidadCargaToneladas, String atrdestino, float atrdistancia, String placa, String modelo, String marca) {
-        super(placa, modelo, marca);
-        this.CapacidadCargaToneladas = CapacidadCargaToneladas;
-        this.atrdestino = atrdestino;
-        this.atrdistancia = atrdistancia;
+    public Camion(double capacidadCargaToneladas, String placa, String marca, String modelo, String atrDestino, double atrDistanciaKm) {
+        super(placa, marca, modelo, atrDestino, atrDistanciaKm);
+        this.capacidadCargaToneladas = capacidadCargaToneladas;
     }
-    
-    
-
-    
 
     @Override
-    float calcularAutonomia() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public double calcularAutonomia() {
+        double autonomiaBase = 500;
+        double factorConsumo = 20;
+        double autonomia = autonomiaBase - (this.capacidadCargaToneladas * factorConsumo) ;
+        return autonomia;
     }
     
     public void asignarRuta(){
+        System.out.println("Ruta estandar asignada. Sin destino especifico aun.");
     }
     
-    public void asignarRuta(String atrdestino){
-        this.atrdestino = atrdestino;
+    public void asignarRuta(String atrDestino){
+        System.out.println("Ruta asignada con destino a:" + atrDestino);
     }
     
+    public void asignarRuta(String atrDestino, double atrDistanciaKm){
+        System.out.println("Ruta asignada al destino: "+ atrDestino + ". Distancia total: "+ atrDistanciaKm +". Preparando logistica pesada.");
+        
+    }
     
 }
