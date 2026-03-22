@@ -6,35 +6,34 @@ package Tipo1;
 
 /**
  *
- * @author Juan Diego Isaza - Juan Manuel Galeano
+ * @author Juan Diego Isaza 
  */
 public class Camion extends Vehiculo {
-    int CapacidadCargaToneladas;
-    String atrdestino;
-    float atrdistancia;
+    double capacidadCargaToneladas;
+    
 
-    public Camion(int CapacidadCargaToneladas, String atrdestino, float atrdistancia, String placa, String modelo, String marca) {
+    public Camion(double capacidadCargaToneladas, String placa, String modelo, String marca) {
         super(placa, modelo, marca);
-        this.CapacidadCargaToneladas = CapacidadCargaToneladas;
-        this.atrdestino = atrdestino;
-        this.atrdistancia = atrdistancia;
+        this.capacidadCargaToneladas = capacidadCargaToneladas;
     }
     
     
 
-    
-
+ 
     @Override
     float calcularAutonomia() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return(float) (1000.0 - (capacidadCargaToneladas * 10.0));
     }
     
+    //TERMINAR DE IMPLEMENTAR EL FUNCIONAMIENTO DE LOS METODOS SOBRECARGADOS
     public void asignarRuta(){
     }
     
     public void asignarRuta(String atrdestino){
-        this.atrdestino = atrdestino;
+
     }
     
-    
+    public void asignarRuta(String atrdestino, double artrDistanciaKm){
+     
+    }
 }

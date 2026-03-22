@@ -8,7 +8,7 @@ import java.util.Objects;
 
 /**
  *
- * @author Juan Diego Isaza - Juan Manuel Galeano
+ * @author Juan Diego Isaza 
  */
 public abstract class Vehiculo {
     String placa;
